@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Kho Lanest</title>
-<meta name="apple-mobile-web-app-title" content="Kho Lanest">
+<title>Lanest</title>
+<meta name="apple-mobile-web-app-title" content="Lanest">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -13,18 +13,24 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <link rel="manifest" href="manifest.webmanifest">
 <style>
-  :root { --bg:#F5F3EA; --ink:#18302B; --muted:#5E6F69; --brand:#1F5A4C; --line:#DAD6C6; }
+  :root { --bg:#F5F3EA; --ink:#18302B; --muted:#5E6F69; --brand:#1F5A4C; --line:#DAD6C6; --gold:#B8862B; }
   * { box-sizing: border-box; }
   body { margin:0; min-height:100vh; background:var(--bg); color:var(--ink);
          font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
          display:flex; align-items:center; justify-content:center; padding: 24px 16px; }
-  .card { width:100%; max-width:380px; text-align:center; }
-  img.logo { width:112px; height:112px; border-radius:26px; box-shadow:0 8px 24px rgba(31,90,76,.25); }
-  h1 { font-family: Georgia, serif; color:var(--brand); font-size:28px; margin:18px 0 4px; }
-  p.sub { margin:0 0 24px; color:var(--muted); }
-  a.go { display:block; background:var(--brand); color:#fff; text-decoration:none; font-weight:600;
-         font-size:17px; padding:15px; border-radius:12px; }
-  .guide { margin-top:28px; text-align:left; background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px 16px; font-size:14px; line-height:1.5; }
+  .card { width:100%; max-width:400px; text-align:center; }
+  img.logo { width:96px; height:96px; border-radius:22px; box-shadow:0 8px 24px rgba(31,90,76,.25); }
+  h1 { font-family: Georgia, serif; color:var(--brand); font-size:26px; margin:14px 0 2px; }
+  p.sub { margin:0 0 22px; color:var(--muted); }
+  .apps { display:grid; gap:12px; }
+  a.app { display:flex; align-items:center; gap:14px; text-align:left; background:#fff; border:1px solid var(--line);
+          border-radius:16px; padding:16px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,.04); }
+  a.app:active { transform: scale(.98); }
+  .ic { width:52px; height:52px; border-radius:14px; background:var(--brand); color:#fff; display:flex; align-items:center; justify-content:center; font-size:26px; flex:none; }
+  .ic.gold { background:var(--gold); }
+  .app b { display:block; font-size:18px; }
+  .app span { color:var(--muted); font-size:13px; }
+  .guide { margin-top:24px; text-align:left; background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px 16px; font-size:14px; line-height:1.5; }
   .guide b { color:var(--brand); }
   .guide ol { margin:6px 0 0; padding-left:20px; }
   .note { margin-top:10px; font-size:12px; color:var(--muted); }
@@ -33,26 +39,27 @@
 <body>
 <main class="card">
   <img class="logo" src="apple-touch-icon.png" alt="Logo Yến Sào Lanest">
-  <h1>Kho Lanest</h1>
-  <p class="sub">Yến Sào Lanest · quản lý tồn kho</p>
-  <a class="go" id="go" href="https://script.google.com/macros/s/AKfycbwgDaYHkjMBi57XKuynbjrXsuSe25xCJXzsSC6pZKTpk6xl0KwUKjTWARNmfTjoonTq/exec">Mở kho</a>
+  <h1>Yến Sào Lanest</h1>
+  <p class="sub">Ứng dụng nội bộ</p>
+  <div class="apps">
+    <a class="app" href="https://script.google.com/macros/s/AKfycbxmikUXfQnvxfVYVDZWmzS9QFuC5zRPQqEiXnybrWm4IrqILE-BGd_PTyP2GEFsS5Tr6Q/exec">
+      <div class="ic gold">🕗</div><div><b>Chấm công</b><span>Chấm vào / ra bằng ảnh + vị trí · xin nghỉ</span></div></a>
+    <a class="app" href="https://script.google.com/macros/s/AKfycbwgDaYHkjMBi57XKuynbjrXsuSe25xCJXzsSC6pZKTpk6xl0KwUKjTWARNmfTjoonTq/exec">
+      <div class="ic">📦</div><div><b>Kho</b><span>Tồn kho · kiểm kho · nhập · xuất · báo cáo</span></div></a>
+  </div>
   <div class="guide" id="guide">
-    <b>Đưa Kho Lanest ra màn hình điện thoại</b>
+    <b>Đưa Lanest ra màn hình điện thoại</b>
     <ol>
-      <li>iPhone: bấm nút <b>Chia sẻ</b> (ô vuông có mũi tên lên) → <b>Thêm vào MH chính</b> → <b>Thêm</b>.</li>
+      <li>iPhone: bấm <b>Chia sẻ</b> (ô vuông có mũi tên lên) → <b>Thêm vào MH chính</b> → <b>Thêm</b>.</li>
       <li>Android: bấm <b>⋮</b> → <b>Thêm vào màn hình chính</b>.</li>
     </ol>
-    <p class="note">Mở từ màn hình chính sẽ vào thẳng kho. Nếu kho báo lỗi "không thể mở tệp", mở trang này trong tab Riêng tư.</p>
+    <p class="note">Mỗi ứng dụng đăng nhập bằng tên và mã riêng. Nếu báo lỗi "không thể mở tệp", mở trang này trong tab Riêng tư.</p>
   </div>
 </main>
 <script>
-  // Mở từ biểu tượng trên màn hình chính thì chuyển thẳng vào app kho.
   var standalone = window.navigator.standalone === true ||
     (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches);
-  if (standalone) {
-    document.getElementById('guide').style.display = 'none';
-    window.location.replace(document.getElementById('go').href);
-  }
+  if (standalone) document.getElementById('guide').style.display = 'none';
 </script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 {
-  "name": "Kho Lanest",
-  "short_name": "Kho Lanest",
+  "name": "Lanest",
+  "short_name": "Lanest",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
