@@ -1,0 +1,39 @@
+/* Giao diện đăng nhập Lanest — dùng chung cho trang cửa ngõ, app Kho, app Chấm công */
+.ln{--ln-green:#1B4D40;--ln-green2:#23604F;--ln-gold:#B8862B;--ln-gold2:#D9B45A;--ln-cream:#F7F2E3;--ln-card:rgba(255,253,246,.94);--ln-ink:#1F3A33;--ln-muted:#5B6B64;--ln-line:#E3D6AE;
+  font-family:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ln-ink);max-width:480px;margin:0 auto;background:var(--ln-cream)}
+.ln *{box-sizing:border-box}
+.ln-hero{display:block;width:100%;height:auto}
+.ln-card{position:relative;margin:-34px 14px 0;background:var(--ln-card);border:1px solid var(--ln-line);border-radius:20px;padding:24px 18px 18px;box-shadow:0 10px 30px rgba(27,77,64,.14);text-align:center}
+.ln-title{font-family:"Lora",Georgia,serif;font-weight:700;font-size:38px;letter-spacing:1px;color:var(--ln-green);margin:0}
+.ln-div{display:flex;align-items:center;justify-content:center;gap:10px;margin:6px 0 4px}
+.ln-div i{display:block;width:88px;height:1px;background:linear-gradient(90deg,transparent,var(--ln-gold2),transparent)}
+.ln-div svg{width:26px;height:26px;color:var(--ln-gold)}
+.ln-sub{margin:0 0 16px;color:var(--ln-muted);font-size:15px}
+.ln-form{background:#fff;border:1px solid #EFE6CC;border-radius:16px;padding:16px;text-align:left;display:flex;flex-direction:column;gap:12px}
+.ln-form label{display:flex;flex-direction:column;gap:6px;font-size:15px;color:var(--ln-ink)}
+.ln-field{display:flex;align-items:center;gap:10px;background:#FBF8EE;border:1px solid #E6DCC0;border-radius:12px;padding:0 12px}
+.ln-field svg{width:20px;height:20px;color:var(--ln-muted);flex:none}
+.ln-field input,.ln-field select{flex:1;border:none;background:transparent;padding:13px 0;font:inherit;color:var(--ln-ink);outline:none;min-width:0;-webkit-appearance:none;appearance:none}
+.ln-field:focus-within{border-color:var(--ln-gold);box-shadow:0 0 0 3px rgba(184,134,43,.15)}
+.ln-btn{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;border-radius:12px;padding:14px;font-family:"Lora",Georgia,serif;font-size:19px;font-weight:700;cursor:pointer;text-decoration:none;border:1.5px solid var(--ln-green)}
+.ln-btn svg{width:24px;height:24px}
+.ln-btn.pri{background:var(--ln-green);color:#fff}
+.ln-btn.pri:hover{background:var(--ln-green2)}
+.ln-btn.sec{background:#fff;color:var(--ln-green)}
+.ln-btn:disabled{opacity:.6}
+.ln-note{margin:4px 0 0;color:var(--ln-muted);font-size:13px;text-align:center}
+.ln-err{background:#F8DEDA;color:#B23A2B;border-radius:10px;padding:9px 12px;font-size:14px}
+.ln-mv{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 10px 0}
+.ln-mv div{background:rgba(255,255,255,.7);border:1px solid #EEE3C4;border-radius:14px;padding:12px;text-align:left}
+.ln-mv h3{display:flex;align-items:center;gap:8px;margin:0 0 6px;font-family:"Lora",Georgia,serif;color:var(--ln-green);font-size:17px}
+.ln-mv h3 span.ic{width:40px;height:40px}
+.ln-mv p{margin:0;font-size:13px;line-height:1.45;color:var(--ln-ink)}
+.ic{display:inline-flex;align-items:center;justify-content:center;border-radius:50%;border:2px solid var(--ln-gold2);background:#FFFBEF;color:var(--ln-green);flex:none}
+.ic svg{width:55%;height:55%}
+.ln-vals h3{display:flex;align-items:center;gap:10px;justify-content:center;font-family:"Lora",Georgia,serif;color:var(--ln-green);font-size:18px;margin:18px 0 10px}
+.ln-vals h3 i{display:block;width:50px;height:1px;background:var(--ln-gold2)}
+.ln-vals ul{list-style:none;margin:0;padding:0 8px;display:grid;grid-template-columns:repeat(6,1fr);gap:4px}
+.ln-vals li{display:flex;flex-direction:column;align-items:center;gap:6px;font-family:"Lora",Georgia,serif;font-size:10.5px;font-weight:700;color:var(--ln-green);text-align:center}
+.ln-vals li .ic{width:46px;height:46px}
+.ln-foot{display:block;width:100%;height:auto;margin-top:10px}
+@media (max-width:370px){.ln-title{font-size:32px}.ln-vals ul{grid-template-columns:repeat(3,1fr);row-gap:12px}.ln-mv{grid-template-columns:1fr}}
